@@ -5,7 +5,6 @@ empty class rectangle
 """
 
 
-
 class Rectangle:
     """
     Rectangle empty class
