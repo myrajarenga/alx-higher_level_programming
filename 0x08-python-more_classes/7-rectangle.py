@@ -12,7 +12,6 @@ class Rectangle:
 
     number_of_instances = 0
     print_symbol = "#"
-    print_symbol = "&"
 
     def __init__(self, width=0, height=0):
         if type(width) is not int:
@@ -65,9 +64,9 @@ class Rectangle:
             return string
         for i in range(self.__height):
             if i != self.__height - 1:
-                string = string + "#" * self.__width + "\n"
+                string = string + str(self.print_symbol) * self.__width + "\n"
             else:
-                string = string + "#" * self.__width
+                string = string + str(self.print_symbol) * self.__width
         return string
 
     def __repr__(self):
