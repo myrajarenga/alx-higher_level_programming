@@ -22,7 +22,7 @@ class Student:
             result = {}
             for i in attrs:
                 try:
-                   result[i] = self.__dict__[i]
+                    result[i] = self.__dict__[i]
                 except Exception:
                     pass
             return result
