@@ -1,9 +1,5 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
-"""
-Created on Fri Jun  5 15:43:09 2020
-@author: meco
-"""
 import sys
 import unittest
 import inspect
@@ -60,4 +56,4 @@ class TestSquare(unittest.TestCase):
         Tests if methods docstring documntation exist
         """
         for func in self.setup:
-            self.assertTrue(len(func[1].__doc__) >= 1
+            self.assertTrue(len(func[1].__doc__) >= 1)
