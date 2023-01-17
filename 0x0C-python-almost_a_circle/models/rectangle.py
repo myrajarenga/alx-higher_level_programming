@@ -109,17 +109,8 @@ class Rectangle(Base):
             return
         else:
             for key, value in kwargs.items():
-                if key == "height":
-                    self.height = value
-                if key == "width":
-                    self.width = value
-                if key == "x":
-                    self.x = value
-                if key == "y":
-                    self.y = value
-                if key == "id":
-                    self.id = value
+                setattr(self, key, value)
 
-"""for key,value in kwargs.items():
-       setattr(self, )
-"""
+    def to_dictionary(self):
+        return {"x": self.x, "y": self.y,
+                "id": self.id, "height": self.height, "width": self.width}
