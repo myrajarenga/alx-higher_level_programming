@@ -7,30 +7,17 @@ from models.base import Base
 
 
 class Rectangle(Base):
-    """The class inherits from the Base class"""
-    def __init__(self, width, height, x=0, y=0, id=None):
-        """init the instances using the class"""
-        if type(y) is not int:
-            raise TypeError("y must be an integer")
-        if y < 0:
-            raise ValueError("y must be >= 0")
-        if type(x) is not int:
-            raise TypeError("x must be an integer")
-        if x < 0:
-            raise ValueError("x must be >= 0")
-        if type(height) is not int:
-            raise TypeError("height must be an integer")
-        if height <= 0:
-            raise ValueError("height must be > 0")
-        if type(width) is not int:
-            raise TypeError("width must be an integer")
-        if width <= 0:
-            raise ValueError("width must be > 0")
-        self.__height = height
-        self.__width = width
-        self.__x = x
-        self.__y = y
-        super().__init__(id)
+    """Inherits from Base class                                              
+    """                                                                      
+    def __init__(self, width, height, x=0, y=0, id=None):                    
+        """Class constructor                                                 
+        Creates private instance attributes                                  
+        """                                                                  
+        super().__init__(id)                                                 
+        self.width = width                                                   
+        self.height = height                                                 
+        self.x = x                                                           
+        self.y = y 
 
     @property
     def width(self):
@@ -112,5 +99,5 @@ class Rectangle(Base):
                 setattr(self, key, value)
 
     def to_dictionary(self):
-        return {"x": self.x, "y": self.y,
+        return {"x": self.x, "y": self.y,\
                 "id": self.id, "height": self.height, "width": self.width}
