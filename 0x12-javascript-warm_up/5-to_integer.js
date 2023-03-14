@@ -5,4 +5,3 @@ if (isNaN(Math.trunc(process.argv[2]))) {
 } else {
   console.log('My number: ' + Math.trunc(process.argv[2]));
 }
-
