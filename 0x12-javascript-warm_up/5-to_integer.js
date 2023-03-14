@@ -1,8 +1,5 @@
 #!/usr/bin/node
 
-const input = process.argv[2];
-const num = parseInt(input);
-
 if (isNaN(Math.trunc(process.argv[2]))) {
   console.log('Not a number: ');
 } else {
