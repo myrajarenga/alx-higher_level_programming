@@ -18,7 +18,8 @@ if __name__ == "__main__":
 
     try:
         cur = connection.cursor()
-        cur.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY states.id")
+        cur.execute("SELECT * FROM states WHERE name LIKE 'N%'\
+        ORDER BY states.id")
         rows = cur.fetchall()
         for row in rows:
             print(row)
