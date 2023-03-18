@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" sqlachemy"""
+""" slqalchmy query """
 
 from model_state import Base, State
 from sqlalchemy.orm import sessionmaker
@@ -18,5 +18,5 @@ if __name__ == "__main__":
     query = session.query(State).order_by(State.id)
     results = query.all()
     for state in results:
-        print(f"{state.id}:{state.name}")
+        print(f"{state.id}: {state.name}")
     session.close()
