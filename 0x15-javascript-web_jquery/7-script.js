@@ -3,4 +3,3 @@ $(document).ready(function() {
     $("div#character").text(data.name);
   });
 });
-
